@@ -24,12 +24,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='NREL Bifacial Field Measurements',
-    #ext_modules = [gencumskymodule],
-    # Visual C++ build tools required: https://visualstudio.microsoft.com/visual-cpp-build-tools/
-    # enable the above to automatically compile GenCumSky source code as part of 
-    # setup.py.  Not really recommended for now...
-    
+    name='Best-Field-Degradation-Research',   
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
@@ -37,12 +32,12 @@ setup(
     # version=versioneer.get_version(),
     # cmdclass=versioneer.get_cmdclass(),
 
-    description='Tools to interface with Radiance for the PV researcher',
+    description='Bifacial Experimental field Degradation Research',
     long_description=long_description,
     long_description_content_type="text/markdown",
 
     # The project's main homepage.
-    url='https://github.com/Duramat/NREL_Bifacial_Field_Measurements',
+    url='https://github.com/DuraMAT/Best-Field-Degradation-Research',
 
     # Author details
     author='Silvana Ovaitt',
@@ -117,7 +112,6 @@ setup(
             'jupyter',
             'pytest',
             'pytest-cov',
-            'pySMARTS',
             ],
     },
     # If there are data files included in your packages that need to be
