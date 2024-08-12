@@ -4,4 +4,7 @@
 format: jb-book
 root: intro
 chapters:
+- file: tutorials/00 - Navigating Duramat API Example
 - file: tutorials/01 - Performance Data
+- file: tutorials/02 - EQE Data
+- file: tutorials/03 - IV Curve Data
