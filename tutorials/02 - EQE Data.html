@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1 - Performance Data &#8212; BEST Field Degradation Research</title>
+    <title>2 - EQE Data &#8212; BEST Field Degradation Research</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/01 - Performance Data';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/02 - EQE Data';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2 - EQE Data" href="02%20-%20EQE%20Data.html" />
-    <link rel="prev" title="0 - Navigating Duramat API Example" href="00%20-%20Navigating%20Duramat%20API%20Example.html" />
+    <link rel="next" title="1 - Performance Data" href="03%20-%20IV%20Curve%20Data.html" />
+    <link rel="prev" title="1 - Performance Data" href="01%20-%20Performance%20Data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,8 +173,8 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="00%20-%20Navigating%20Duramat%20API%20Example.html">0 - Navigating Duramat API Example</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1 - Performance Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02%20-%20EQE%20Data.html">2 - EQE Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01%20-%20Performance%20Data.html">1 - Performance Data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2 - EQE Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03%20-%20IV%20Curve%20Data.html">1 - Performance Data</a></li>
 </ul>
 
@@ -230,7 +230,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/DURAMAT/Best-Field-Degradatoin-Research/blob/main/tutorials/tutorials/01 - Performance Data.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/DURAMAT/Best-Field-Degradatoin-Research/blob/main/tutorials/tutorials/02 - EQE Data.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +296,7 @@
       
       
       
-      <li><a href="https://github.com/DURAMAT/Best-Field-Degradatoin-Research/issues/new?title=Issue%20on%20page%20%2Ftutorials/01 - Performance Data.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/DURAMAT/Best-Field-Degradatoin-Research/issues/new?title=Issue%20on%20page%20%2Ftutorials/02 - EQE Data.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +326,7 @@
       
       
       
-      <li><a href="../_sources/tutorials/01 - Performance Data.ipynb" target="_blank"
+      <li><a href="../_sources/tutorials/02 - EQE Data.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +406,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1 - Performance Data</h1>
+    <h1>2 - EQE Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -420,15 +420,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="performance-data">
-<h1>1 - Performance Data<a class="headerlink" href="#performance-data" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="eqe-data">
+<h1>2 - EQE Data<a class="headerlink" href="#eqe-data" title="Link to this heading">#</a></h1>
 <p><strong>Requirements:</strong></p>
 <ul class="simple">
 <li><p>None for this dataset; it is public on the Duramat API</p></li>
 </ul>
 <p><strong>Objectives:</strong></p>
 <ol class="arabic simple">
-<li><p>Read in performance data from the bifacial field</p></li>
+<li><p>Read in EQE Data from the bifacial field</p></li>
 <li><p>Explore the dataset</p></li>
 </ol>
 <div class="cell docutils container">
@@ -472,8 +472,8 @@ Pandas version  2.1.0
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_id</span> <span class="o">=</span><span class="s1">&#39;72334fe1-fa52-45f8-a43c-836a35b9c526&#39;</span>  <span class="c1"># For BEST Field Data</span>
-<span class="n">resource_id</span><span class="o">=</span><span class="s1">&#39;1c3ac2d9-4734-49b5-b1e7-577a4cc62d80&#39;</span>  <span class="c1"># &#39;BEST_Data.csv&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_id</span> <span class="o">=</span><span class="s1">&#39;7cdfed1b-7571-4b28-958e-c62e8f67139b&#39;</span>  <span class="c1"># For BEST Field Degradation Research</span>
+<span class="n">resource_id</span><span class="o">=</span><span class="s1">&#39;4421d5fc-e7b8-4503-add4-5a988e5a435e&#39;</span>  <span class="c1"># &#39;2019-2024 EQE Blind.csv&#39;</span>
 
 <span class="c1"># Set your API token. Since this is open-source data, not really needed.</span>
 <span class="n">api_token</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -516,47 +516,442 @@ Pandas version  2.1.0
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Yf8&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1ddf3496090&gt;]
-</pre></div>
-</div>
-<img alt="../_images/1945a75c4f17a63bea8a992a0792f423645251cf80e864cac61fd8b761970510.png" src="../_images/1945a75c4f17a63bea8a992a0792f423645251cf80e864cac61fd8b761970510.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;row2dcp&#39;, &#39;row2Gpoa_front&#39;, &#39;row2kWh&#39;, &#39;row2dcv&#39;,
-       &#39;row2dci&#39;, &#39;row2tmod&#39;, &#39;Yf2&#39;, &#39;PR2&#39;, &#39;row8dcp&#39;, &#39;row8Gpoa_front&#39;,
-       &#39;row8Gpoa_rear&#39;, &#39;Yf8&#39;, &#39;PR8&#39;, &#39;row9dcp&#39;, &#39;row9Gpoa_front&#39;,
-       &#39;row9Gpoa_rear&#39;, &#39;row9kWh&#39;, &#39;row9dcv&#39;, &#39;row9dci&#39;, &#39;row9tmod&#39;, &#39;Yf9&#39;,
-       &#39;PR9&#39;, &#39;poa_irradiance_front_IMT&#39;, &#39;poa_irradiance_rear_IMT_West&#39;,
-       &#39;poa_irradiance_rear_IMT_CenterWest&#39;,
-       &#39;poa_irradiance_rear_IMT_CenterEast&#39;, &#39;poa_irradiance_rear_IMT_East&#39;,
-       &#39;poa_irradiance_front_licor&#39;, &#39;poa_irradiance_rear_licor&#39;,
-       &#39;poa_irradiance_front_cm11&#39;, &#39;poa_irradiance_rear_cm11&#39;,
-       &#39;sunkitty_albedo_1&#39;, &#39;sunkitty_GRI_CM22&#39;, &#39;sunkitty_GHI_CM22&#39;,
-       &#39;sunkitty_albedo_2&#39;, &#39;sunkitty_GRI_IMT&#39;, &#39;sunkitty_GHI_IMT&#39;,
-       &#39;sunkitty_albedo_3&#39;, &#39;sunkitty_GRI_AP&#39;, &#39;sunkitty_GHI_AP&#39;,
-       &#39;Hydra_current_1&#39;, &#39;Hydra_current_2&#39;, &#39;Hydra_current_3&#39;,
-       &#39;Hydra_current_4&#39;, &#39;Hydra_current_5&#39;, &#39;Hydra_current_6&#39;,
-       &#39;Hydra_current_7&#39;, &#39;Hydra_current_8&#39;, &#39;Hydra_current_9&#39;,
-       &#39;Hydra_current_10&#39;, &#39;Hydra_current_11&#39;, &#39;Hydra_current_12&#39;,
-       &#39;temp_ambient&#39;, &#39;wind_direction&#39;, &#39;wind_speed&#39;,
-       &#39;SRRL Tower Dry Bulb Temp [deg C]&#39;, &#39;SRRL Avg Wind Speed @ 6ft [m/s]&#39;,
-       &#39;SRRL Direct CHP1-1 [W/m^2]&#39;, &#39;SRRL Diffuse 8-48 (vent) [W/m^2]&#39;,
-       &#39;SRRL Global CMP22 (vent/cor) [W/m^2]&#39;, &#39;SRRL Albedo (CMP11)&#39;],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Technology&#39;, &#39;Type&#39;, &#39;Control-Field&#39;, &#39;Side&#39;, &#39;Shot&#39;, &#39;model&#39;,
+       &#39;Normalization&#39;, &#39;310&#39;, &#39;325&#39;, &#39;340&#39;, &#39;365&#39;, &#39;385&#39;, &#39;405&#39;, &#39;415&#39;, &#39;430&#39;,
+       &#39;450&#39;, &#39;470&#39;, &#39;490&#39;, &#39;505&#39;, &#39;525&#39;, &#39;545&#39;, &#39;610&#39;, &#39;635&#39;, &#39;660&#39;, &#39;670&#39;,
+       &#39;690&#39;, &#39;710&#39;, &#39;725&#39;, &#39;740&#39;, &#39;760&#39;, &#39;770&#39;, &#39;810&#39;, &#39;830&#39;, &#39;850&#39;, &#39;870&#39;,
+       &#39;890&#39;, &#39;920&#39;, &#39;945&#39;, &#39;970&#39;, &#39;990&#39;, &#39;1020&#39;, &#39;1050&#39;, &#39;1070&#39;, &#39;1090&#39;,
+       &#39;1105&#39;, &#39;1180&#39;, &#39;1195&#39;, &#39;DATE&#39;],
       dtype=&#39;object&#39;)
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TecA</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Normalization&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Dana&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">TecA</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>5</th>
+      <th>7</th>
+      <th>9</th>
+      <th>11</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Technology</th>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <td>bifacial</td>
+      <td>bifacial</td>
+      <td>bifacial</td>
+      <td>bifacial</td>
+    </tr>
+    <tr>
+      <th>Control-Field</th>
+      <td>Control</td>
+      <td>Control</td>
+      <td>Field</td>
+      <td>Field</td>
+    </tr>
+    <tr>
+      <th>Side</th>
+      <td>front</td>
+      <td>rear</td>
+      <td>front</td>
+      <td>rear</td>
+    </tr>
+    <tr>
+      <th>Shot</th>
+      <td>single</td>
+      <td>single</td>
+      <td>single</td>
+      <td>single</td>
+    </tr>
+    <tr>
+      <th>model</th>
+      <td>M1905-0005</td>
+      <td>M1905-0005</td>
+      <td>M1905-0022</td>
+      <td>M1905-0022</td>
+    </tr>
+    <tr>
+      <th>Normalization</th>
+      <td>Dana</td>
+      <td>Dana</td>
+      <td>Dana</td>
+      <td>Dana</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>15.641027</td>
+      <td>4.349425</td>
+      <td>11.551697</td>
+      <td>7.128717</td>
+    </tr>
+    <tr>
+      <th>325</th>
+      <td>35.718531</td>
+      <td>5.575427</td>
+      <td>30.604618</td>
+      <td>7.386191</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>49.247361</td>
+      <td>8.499512</td>
+      <td>43.114481</td>
+      <td>8.811346</td>
+    </tr>
+    <tr>
+      <th>365</th>
+      <td>68.271769</td>
+      <td>43.196726</td>
+      <td>61.194046</td>
+      <td>38.548213</td>
+    </tr>
+    <tr>
+      <th>385</th>
+      <td>75.714628</td>
+      <td>64.134983</td>
+      <td>69.974859</td>
+      <td>61.893344</td>
+    </tr>
+    <tr>
+      <th>405</th>
+      <td>83.49576</td>
+      <td>74.288161</td>
+      <td>78.310937</td>
+      <td>72.541667</td>
+    </tr>
+    <tr>
+      <th>415</th>
+      <td>86.452911</td>
+      <td>77.261757</td>
+      <td>81.723738</td>
+      <td>75.750391</td>
+    </tr>
+    <tr>
+      <th>430</th>
+      <td>90.257145</td>
+      <td>80.775353</td>
+      <td>85.903872</td>
+      <td>79.361911</td>
+    </tr>
+    <tr>
+      <th>450</th>
+      <td>92.089472</td>
+      <td>82.998838</td>
+      <td>88.656562</td>
+      <td>81.638085</td>
+    </tr>
+    <tr>
+      <th>470</th>
+      <td>97.650665</td>
+      <td>87.841021</td>
+      <td>95.118742</td>
+      <td>88.687966</td>
+    </tr>
+    <tr>
+      <th>490</th>
+      <td>96.968879</td>
+      <td>89.892365</td>
+      <td>94.630453</td>
+      <td>89.604981</td>
+    </tr>
+    <tr>
+      <th>505</th>
+      <td>98.275959</td>
+      <td>90.725546</td>
+      <td>95.62699</td>
+      <td>89.397608</td>
+    </tr>
+    <tr>
+      <th>525</th>
+      <td>98.788808</td>
+      <td>91.572374</td>
+      <td>95.987545</td>
+      <td>89.995715</td>
+    </tr>
+    <tr>
+      <th>545</th>
+      <td>98.0046</td>
+      <td>91.794385</td>
+      <td>96.398199</td>
+      <td>90.977263</td>
+    </tr>
+    <tr>
+      <th>610</th>
+      <td>98.814765</td>
+      <td>94.796381</td>
+      <td>98.007637</td>
+      <td>93.258235</td>
+    </tr>
+    <tr>
+      <th>635</th>
+      <td>98.54743</td>
+      <td>94.804143</td>
+      <td>98.502019</td>
+      <td>94.192716</td>
+    </tr>
+    <tr>
+      <th>660</th>
+      <td>98.229091</td>
+      <td>95.383009</td>
+      <td>97.657199</td>
+      <td>94.038681</td>
+    </tr>
+    <tr>
+      <th>670</th>
+      <td>98.058963</td>
+      <td>95.440945</td>
+      <td>97.578271</td>
+      <td>93.899051</td>
+    </tr>
+    <tr>
+      <th>690</th>
+      <td>99.212681</td>
+      <td>96.836766</td>
+      <td>98.132304</td>
+      <td>95.01799</td>
+    </tr>
+    <tr>
+      <th>710</th>
+      <td>98.855418</td>
+      <td>96.473943</td>
+      <td>98.404599</td>
+      <td>95.964242</td>
+    </tr>
+    <tr>
+      <th>725</th>
+      <td>100.0</td>
+      <td>98.358834</td>
+      <td>100.0</td>
+      <td>96.896238</td>
+    </tr>
+    <tr>
+      <th>740</th>
+      <td>99.554642</td>
+      <td>97.581812</td>
+      <td>99.16163</td>
+      <td>96.282671</td>
+    </tr>
+    <tr>
+      <th>760</th>
+      <td>99.130776</td>
+      <td>97.841084</td>
+      <td>98.490236</td>
+      <td>96.449314</td>
+    </tr>
+    <tr>
+      <th>770</th>
+      <td>99.364651</td>
+      <td>98.562063</td>
+      <td>99.091848</td>
+      <td>97.552833</td>
+    </tr>
+    <tr>
+      <th>810</th>
+      <td>97.394224</td>
+      <td>96.385105</td>
+      <td>97.551745</td>
+      <td>94.813402</td>
+    </tr>
+    <tr>
+      <th>830</th>
+      <td>97.510421</td>
+      <td>96.848293</td>
+      <td>97.91807</td>
+      <td>95.588823</td>
+    </tr>
+    <tr>
+      <th>850</th>
+      <td>98.415994</td>
+      <td>97.161021</td>
+      <td>97.601039</td>
+      <td>96.454462</td>
+    </tr>
+    <tr>
+      <th>870</th>
+      <td>97.319703</td>
+      <td>98.346279</td>
+      <td>98.512886</td>
+      <td>96.255275</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>97.687661</td>
+      <td>98.051172</td>
+      <td>97.796458</td>
+      <td>95.956894</td>
+    </tr>
+    <tr>
+      <th>920</th>
+      <td>95.877603</td>
+      <td>97.872359</td>
+      <td>96.069917</td>
+      <td>97.992581</td>
+    </tr>
+    <tr>
+      <th>945</th>
+      <td>96.42485</td>
+      <td>99.451755</td>
+      <td>95.528317</td>
+      <td>97.722343</td>
+    </tr>
+    <tr>
+      <th>970</th>
+      <td>95.117537</td>
+      <td>100.0</td>
+      <td>94.764145</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>990</th>
+      <td>89.560738</td>
+      <td>96.166609</td>
+      <td>89.61248</td>
+      <td>96.015863</td>
+    </tr>
+    <tr>
+      <th>1020</th>
+      <td>83.815482</td>
+      <td>91.293048</td>
+      <td>84.639205</td>
+      <td>91.140444</td>
+    </tr>
+    <tr>
+      <th>1050</th>
+      <td>74.095809</td>
+      <td>81.244573</td>
+      <td>73.711034</td>
+      <td>80.926104</td>
+    </tr>
+    <tr>
+      <th>1070</th>
+      <td>63.919699</td>
+      <td>69.538065</td>
+      <td>63.736742</td>
+      <td>69.281802</td>
+    </tr>
+    <tr>
+      <th>1090</th>
+      <td>53.450787</td>
+      <td>57.623936</td>
+      <td>53.223257</td>
+      <td>57.426379</td>
+    </tr>
+    <tr>
+      <th>1105</th>
+      <td>46.759422</td>
+      <td>51.004291</td>
+      <td>46.247865</td>
+      <td>50.839192</td>
+    </tr>
+    <tr>
+      <th>1180</th>
+      <td>3.310564</td>
+      <td>3.503078</td>
+      <td>3.98867</td>
+      <td>3.332168</td>
+    </tr>
+    <tr>
+      <th>1195</th>
+      <td>2.92919</td>
+      <td>3.237031</td>
+      <td>3.31954</td>
+      <td>3.116277</td>
+    </tr>
+    <tr>
+      <th>DATE</th>
+      <td>May-24</td>
+      <td>May-24</td>
+      <td>May-24</td>
+      <td>May-24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ploting EQEs for Control and Field</span>
+<span class="n">wavindex</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">TecA</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># Indexes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavindex</span><span class="p">,</span> <span class="n">TecA</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Control Front&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavindex</span><span class="p">,</span> <span class="n">TecA</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Control Rear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavindex</span><span class="p">,</span> <span class="n">TecA</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fielded Front&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavindex</span><span class="p">,</span> <span class="n">TecA</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fielded Rear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Wavelength [nm]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Normalized Quantum Efficiency [%]avelength [nm]&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/57a2b63f7a59edae91f76db061e0a8a162cb1603ad753567bc2cba8a317b38a3.png" src="../_images/57a2b63f7a59edae91f76db061e0a8a162cb1603ad753567bc2cba8a317b38a3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ploting Difference in EQEs for Control vs Field</span>
+<span class="n">wavindex</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">TecA</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># Indexes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavindex</span><span class="p">,</span> <span class="n">TecA</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">TecA</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Control Front&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wavindex</span><span class="p">,</span> <span class="n">TecA</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">TecA</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Control Rear&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Wavelength [nm]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Difference</span><span class="se">\n</span><span class="s1">(Fielded - Control)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d3db8d1c3b7dc774761891da880861f52b5bd6062412865ff5207c26afc89811.png" src="../_images/d3db8d1c3b7dc774761891da880861f52b5bd6062412865ff5207c26afc89811.png" />
 </div>
 </div>
 </section>
@@ -592,20 +987,20 @@ Pandas version  2.1.0
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="00%20-%20Navigating%20Duramat%20API%20Example.html"
+       href="01%20-%20Performance%20Data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">0 - Navigating Duramat API Example</p>
+        <p class="prev-next-title">1 - Performance Data</p>
       </div>
     </a>
     <a class="right-next"
-       href="02%20-%20EQE%20Data.html"
+       href="03%20-%20IV%20Curve%20Data.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2 - EQE Data</p>
+        <p class="prev-next-title">1 - Performance Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
