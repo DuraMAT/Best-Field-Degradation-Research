@@ -1,4 +1,4 @@
-![logo](bifacialfield.png)
+![logo](bifacialfield.PNG)
 
 # NREL Bifacial Experimental Single-Axis Tracknig (BEST) Field Degradation Research
 
